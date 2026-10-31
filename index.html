@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Планировщик задач</title>
+</head>
+
+<body>
+    <header>
+        <h1>Планировщик задач<button class="change-theme-btn">
+                <img class="theme-icon" src="img/moon.png">
+            </button></h1>
+
+    </header>
+
+    <main>
+        <form class="task-wrapper">
+            <textarea class="task-text" placeholder="Что бы вы хотели сделать?"></textarea>
+
+            <button class="task-button" type="submit">
+                <img class="task-img" src="img/done.png" alt="">
+            </button>
+        </form>
+        <div class="select-priority">
+            <div class="selected">Выберите приоритет задачи</div>
+            <ul class="options">
+                <li><img class="priority" src="img/red-flag.png">Высокий</li>
+                <li><img class="priority" src="img/yellow-flag.png">Средний</li>
+                <li><img class="priority" src="img/blue-flag.png">Низкий</li>
+            </ul>
+        </div>
+
+        <h2 class="active-task">Активные задачи</h2>
+        <button class="clear-active-btn hidden">Очистить список</button>
+        <ul class="task-list"></ul>
+
+        <h2 class="done-task">Выполненные задачи</h2>
+        <button class="clear-done-btn hidden">Очистить список</button>
+        <ul class="done-list"></ul>
+    </main>
+
+    <footer></footer>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+body {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.priority {
+    display: block;
+    margin: auto;
+}
+
+.change-theme-btn {
+    all: unset;
+    cursor: pointer;
+    margin: auto;
+    margin-left: 20px;
+}
+
+.theme-icon {
+    width: 35px;
+    height: 35px;
+}
+
+body.dark {
+    color: white;
+    background: rgb(37, 38, 39);
+}
+
+h1 {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.task-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.task-text {
+    width: 550px;
+    min-height: 50px;
+    overflow: hidden;
+    padding: 0;
+    margin: auto;
+    margin-right: 10px;
+    resize: none;
+    border-radius: 7px;
+    border: 1px solid black;
+}
+
+body.dark .task-text {
+    background: #b0b0b0;
+}
+
+.task-button {
+    all: unset;
+    cursor: pointer;
+    margin: auto;
+    margin-left: 0px;
+}
+
+.task-img {
+    width: 35px;
+    height: 35px;
+}
+
+.selected {
+    display: flex;
+    text-align: center;
+    cursor: pointer;
+    padding: 7px;
+    border: 1px solid black;
+    width: max-content;
+    border-radius: 7px;
+    margin: auto;
+}
+
+.options {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.options li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+.priority {
+    width: 15px;
+    height: 15px;
+    margin: 0;
+}
+
+.task-edit {
+    width: 100%;
+    resize: none;
+    border: none;
+    outline: none;
+    font: inherit;
+    background: transparent;
+}
+
+.active-task {
+    text-align: center;
+}
+
+.task-list, .done-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+}
+
+.task-item, .task-done {
+    word-break: break-all;
+    white-space: pre-wrap;
+    position: relative;
+    display: flex;
+    border: 2px solid gray;
+    width: 590px;
+    padding: 5px;
+    height: auto;
+    border-radius: 7px;
+    margin: 5px auto;
+    align-items: center;
+}
+
+body.dark .task-item, body.dark .task-done {
+    background: #b0b0b0;
+    color: black;
+}
+
+.task-check {
+    width: 24px;
+    height: 24px;
+    background: url('img/checkmark.png') no-repeat center;
+    background-size: contain;
+    cursor: pointer;
+    flex-shrink: 0;
+    margin-right: 5px;
+}
+
+.done-task {
+    text-align: center;
+}
+
+.clear-done-btn, .clear-active-btn, .selected {
+    display: block;
+    margin: auto;
+    font-size: 16px;
+    padding: 7px;
+    border-radius: 7px;
+    background-color: #b8efd6;
+    border: 1px solid #4c4a4a;
+    cursor: pointer;
+    transition: all 300ms ease-in-out;
+}
+
+.selected {
+    display: flex;
+}
+
+body.dark .selected {
+    display: flex;
+    color: black;
+}
+
+.clear-done-btn:hover, .clear-active-btn:hover, .selected:hover {
+    background: #a9edb7;
+    box-shadow: 2px 2px 2px 0 rgb(102, 99, 99);
+}
+
+.hidden {
+    display: none;
+}
+
+.task-done {
+    text-decoration: line-through;
+    opacity: 0.6;
+}
+
+/* ============================================================================================================================================ */
+/* адаптивная верстка */
+@media (max-width: 768px) {
+    .task-text {
+        width: 70%;
+    }
+
+    .task-item, .task-done {
+        width: 80%;
+    }
+}
